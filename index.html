@@ -14,23 +14,153 @@
     <!--
         -CSS
     -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/stile.css">
 
 </head>
 <body>
     
-    <div class="overlay" data-overlay></div>
+    <div class="overlay " data-overlay></div>
 
 
     <!--
         Modal
     -->
 
-    <div class="modal" data-modal>
+    <div class="modal closed" data-modal>
 
+        <div class="modal-close-overlay" data-modal-overlay></div>
+        
+        <div class="modal-content">
+            <button class="modal-close-btn" data-modal-close>
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="newsletter-img">
+            
+                <img src="assets/imagens/foto-model.jpeg" alt="newsletter" width="600" height="600">
+
+            </div>
+
+            <div class="newsletter">
+                
+                <form action="#">
+
+                    <div class="newsletter-header">
+
+                        <h3 class="newsletter-title">Assine o Newsletter.</h3>
+
+                        <p class="newsletter-desc">assine o <b>Koisas de Ana</b> para obter os produtos mais recentes e atualizações de descontos.</p>
+
+                    </div>
+
+                    <input type="email" name="email" class="email-field" placeholder="Email" required>
+
+                    <button type="submit" class="btn-newsletter">
+                        
+                        Se inscrever
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
         
     </div>
 
+    <!--
+        Brinde de notificação (notification toast)
+    -->
+    
+    <div class="notification-toast closed" data-toast>
+
+        <button class="toast-close-btn" data-toast-close>
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <div class="toast-banner">
+            <img src="assets/imagens/perfume-banner.jpeg" alt="perfume brinde" width="92" height="85">
+        </div>
+
+        <div class="toast-detail">
+            
+            <p class="toast-message">
+                Alguém em novo acabou de comprar
+            </p>
+
+            <p class="toast-title">
+                Perfumes
+            </p>
+
+            <p class="toast-meta">
+                <time datetime="PT2M">2 Minutos</time> atrás
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!--
+        HEADER
+    -->
+
+    <header>
+       
+        <div class="header-top">
+          
+            <div class="container">
+                
+                <ul class="header-social-container">
+
+                    <li>
+                        <a href="#" class="social-link">
+                            
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+               <div class="header-alert-news">
+                <p>
+                    <b>Frete grátis</b>
+                    Esta semana encomendei - R$ 55,00
+                </p>
+               </div> 
+
+               <div class="header-top-actions">
+
+                <select name="currency" >
+
+                    <option value="R$">R$ </option>
+
+                </select>
+
+
+               </div>
+
+            </div>
+       
+        </div>
+
+        <div class="header-main">
+           
+            <div class="container">
+                <a href="#" class="header-logo">
+                    <img src="" alt="">
+                </a>
+
+            </div>
+
+        </div>
+    </header>
 
 
 
