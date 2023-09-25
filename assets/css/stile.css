@@ -1138,3 +1138,259 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0,0%,70%);}
     color: var(--mateus-cinza);
     font-size: var(--fs-11);
 }
+
+
+
+/*
+    - GRADE DE PRODUTOS 
+*/
+
+
+.product-main { margin-bottom: 30px; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.product-grid .showcase {
+    border: 1px solid var(--culta);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: var(--transition-timing);
+}
+
+.product-grid .showcase:hover { box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1); }
+
+.product-grid .showcase-banner { position: relative; }
+
+.product-grid .product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-timing);
+}
+
+.product-grid .product-img.default {
+    position: relative;
+    z-index: 1;
+}
+
+.product-grid .product-img.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+}
+
+.product-grid .showcase:hover .product-img.hover { opacity: 1; }
+
+.product-grid .showcase:hover .product-img.default { opacity: 0; }
+
+.product-grid .showcase:hover .product-img { transform: scale(1.1); }
+
+.product-grid .showcase-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--oceano-verde);
+    font-size: var(--fs-8);
+    font-weight: var(--weight-500);
+    color: var(--branco);
+    padding: 0 8px;
+    border-radius: var(--border-radius-sm);
+    z-index: 3;
+}
+
+.product-grid .showcase-badge.angulo {
+    top: 8px;
+    left: -29px;
+    transform: rotate(-45deg);
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 5px 40px;
+}
+
+.product-grid .showcase-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    transform: translateX(50px);
+    transition: var(--transition-timing);
+    z-index: 3;
+}
+
+.product-grid .showcase:hover .showcase-actions { transform: translateX(0); }
+
+.product-grid .btn-action {
+    background: var(--branco);
+    color: var(--prata-sonico);
+    margin-bottom: 5px;
+    border: 1px solid var(--culta);
+    padding: 5px;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-timing);
+}
+
+.product-grid .btn-action:hover {
+    background: var(--preto-misterioso);
+    color: var(--branco);
+    border-color: var(--preto-misterioso);
+}
+
+.product-grid .showcase-content { padding: 15px 20px 0; }
+
+.product-grid .showcase-category {
+    color: var(--oceano-verde);
+    font-size: var(--fs-9);
+    font-weight: var(--weight-500);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.product-grid .showcase-title {
+    color: var(--prata-sonico);
+    font-size: var(--fs-8);
+    font-weight: var(--weight-300);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    transform: var(--transition-timing);
+}
+
+.product-grid .showcase-title:hover { color: var(--preto-misterioso) }
+
+.product-grid .showcase-rating {
+    display: flex;
+    color: var(--marrom-arenoso);
+    margin-bottom: 10px;
+}
+
+.product-grid .price-box {
+    display: flex;
+    gap: 10px;
+    font-size: var(--fs-7);
+    color: var(--preto-misterioso);
+    margin-bottom: 10px;
+}
+
+.product-grid .price { font-weight: var(--weight-700); }
+
+.product-grid del { color: var(--prata-sonico); }
+
+
+/* 
+    Depoimentos
+*/
+
+
+.testimonials-box { margin-bottom: 50px; }
+
+.testimonial-card {
+    padding: 30px 20px;
+    border: 1px solid var(--culta);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.testimonial-banner {
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.testimonial-name {
+    font-weight: var(--weight-700);
+    text-transform: uppercase;
+    color: var(--prata-sonico);
+    margin-bottom: 5px;
+}
+
+.testimonial-title {
+    color: var(--onix);
+    font-size: var(--fs-7);
+    margin-bottom: 15px;
+}
+
+.quotation-img {
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.testimonial-desc {
+    max-width: 70%;
+    margin: auto;
+    color: var(--prata-sonico);
+    font: var(--fs-7);
+}
+
+
+
+/*
+    Chamada de atenção
+*/
+
+
+.cta-container {
+    position: relative;
+    aspect-ratio: 5 / 6;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.cta-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-content {
+    background: hsla(0, 0%, 100%, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: var(--border-radius-sm);
+}
+
+.cta-content .discount {
+    background: var(--preto-misterioso);
+    color: var(--branco);
+    font-size: var(--fs-11);
+    font-weight: var(--weight-600);
+    text-transform: uppercase;
+    width: max-content;
+    margin: auto;
+    padding: 0 5px;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 5px;
+}
+
+.cta-title {
+    color: var(--onix);
+    font-size: var(--fs-5);
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.cta-text {
+    color: var(--prata-sonico);
+    font-size: var(--fs-7);
+    margin-bottom: 5px;
+}
+
+.cta-btn {
+    font-size: var(--fs-9);
+    color: var(--prata-sonico);
+    text-transform: uppercase;
+    font-weight: var(--weight-700);
+    margin: auto;
+}
